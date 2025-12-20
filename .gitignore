@@ -1,0 +1,29 @@
+# =========================
+# Build artifacts
+# =========================
+build/
+bin/
+out/
+obj/
+
+# Compiled object files
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+*~
+.DS_Store
+Thumbs.db
+*.log
+.cache/
