@@ -1,14 +1,25 @@
 #pragma once
 #include <string_view>
-using namespace std;
 
 enum class TokenType {
-	STAR,
-	DOUBLE_STAR,
-	EOF_TOKEN
+  MATH_INLINE,
+  MATH_BLOCK,
+  STAR,
+  DOUBLE_STAR,
+  TEXT,
+  PIPE,
+  DASH,
+  BANG,
+  OPEN_BRAC,
+  CLOSE_BRAC,
+  OPEN_PAREN,
+  CLOSE_PAREN,
+  BACKTICK,
+  NEWLINE,
+  EOF_TOKEN
 };
 
 struct Token {
-	TokenType type;
-	string_view value;
+  TokenType type;
+  std::string_view value;
 };
