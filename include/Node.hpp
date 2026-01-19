@@ -20,8 +20,8 @@ enum class NodeType {
 
 struct Node {
   NodeType type;
-  std::string value;
-  std::string language; // optional, only for CODE_BLOCK
+  std::string_view value; // small optimisation
+  std::string language;   // optional, only for CODE_BLOCK
   std::vector<std::unique_ptr<Node>> childNodes;
 
   Node(NodeType t, std::string_view v = "") : type(t), value(v) {};

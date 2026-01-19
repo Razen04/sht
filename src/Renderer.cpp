@@ -3,10 +3,11 @@
 #include <string>
 using namespace std;
 
-string Renderer::escapeHtml(const string &raw) {
+string Renderer::escapeHtml(const std::string_view &raw) {
   int n = raw.size();
 
   string res;
+  res.reserve(raw.size()); // reserve the memory upfornt, a small optimisation
   for (int i = 0; i < n; i++) {
     if (raw[i] == '&') {
       res += "&amp;";
